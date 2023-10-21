@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var rvChars: RecyclerView
     var offset = 0
     private val limit = 20
+    val isLoading = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,13 +65,17 @@ class MainActivity : AppCompatActivity() {
 
                         val adapter = CharAdapter(charList, charNames, charDescs)
                         rvChars.adapter = adapter
-                        rvChars.layoutManager = LinearLayoutManager(this@MainActivity)
+                        val layoutManager = LinearLayoutManager(this@MainActivity)
+                        rvChars.layoutManager = layoutManager
                         rvChars.addItemDecoration(
                             DividerItemDecoration(
                                 this@MainActivity,
                                 DividerItemDecoration.VERTICAL
                             )
                         )
+                        endOfScroll(layoutManager)
+                        adapter.notifyItemRangeInserted(charList.size -
+                                charImageArray.length(), charImageArray.length())
                     }
 
                     override fun onFailure(
@@ -93,6 +98,29 @@ class MainActivity : AppCompatActivity() {
         val hash = bytes.joinToString("") { "%02x".format(it) }
 
         return "ts=1&apikey=$pubKey&hash=$hash&offset=$offset&limit=$limit"
+    }
+
+    private fun endOfScroll(layoutManager: LinearLayoutManager){
+        rvChars.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
+                val visibleItemCount = layoutManager.childCount
+                val totalItemCount = layoutManager.itemCount
+                val firstVisibleItemPosition = layoutManager.findFirstVisibleItemPosition()
+
+                if (!isLoading) { // Check if a loading operation is not already in progress
+                    if (visibleItemCount + firstVisibleItemPosition >= totalItemCount && firstVisibleItemPosition >= 0) {
+                        // This condition is met when the end of the list is reached
+                        loadMoreData() // Load more data
+                    }
+                }
+            }
+        })
+    }
+
+    private fun loadMoreData() {
+        offset += limit
+        getCharURL()
     }
 
 }

@@ -1,10 +1,11 @@
 package com.example.uatu
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,6 +30,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val actionBar: ActionBar? = supportActionBar
+        if (actionBar != null) {
+            actionBar.title = "Uatu The Watcher's Codex"
+        }
 
         getCharURL()
 
@@ -162,7 +167,7 @@ class MainActivity : AppCompatActivity() {
         val client = AsyncHttpClient()
         val fields = getFields()
 
-        client["https://gateway.marvel.com/v1/public/characters?name=$searchText&$fields",
+        client["https://gateway.marvel.com/v1/public/characters?nameStartsWith=$searchText&$fields",
                 object : JsonHttpResponseHandler() {
                     override fun onFailure(
                         statusCode: Int,

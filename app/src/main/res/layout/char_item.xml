@@ -18,11 +18,10 @@
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="10dp"
-        android:fontFamily="@font/comic_neue"
-        app:layout_constraintWidth_percent=".5"
+        android:fontFamily="@font/biorhyme"
         app:layout_constraintStart_toEndOf="@id/char_image"
-        app:layout_constraintTop_toTopOf="@id/char_image" />
+        app:layout_constraintTop_toTopOf="@id/char_image"
+        app:layout_constraintWidth_percent=".5" />
 
     <TextView
         android:id="@+id/char_description"

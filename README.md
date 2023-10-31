@@ -1,29 +1,33 @@
-# Uatu
-# AND101 Project 6 - CYOAPI Part 2: RecyclerView Edition
+<!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
+
+# AND101 Project 7 - CYOAPI Part 3: Beautified
 
 Submitted by: **Brandon Boit**
 
-Time spent: **15** hours spent in total
+Time spent: **X** hours spent in total
 
 ## Summary
 
-**Uatu** is an android app that **displays a scrollable list of characters from the Marvel API and allows the user to search for a specific character**
+**Uatu** is an android app that **displays a scrollable list of characters from the Marvel API**
 
-If I had to describe this project in three (3) emojis, they would be: 🦸‍♂️ 🥳 😓
+If I had to describe this project in three (3) emojis, they would be: 💅👨🏾‍💻🦸‍♂️
 
 ## Application Features
 
+<!-- (This is a comment) Please be sure to change the [ ] to [x] for any features you completed.  If a feature is not checked [x], you might miss the points for that item! -->
+
 The following REQUIRED features are completed:
 
-- [x] Make an API call to an API of your choice using AsyncHTTPClient
-- [x] Implement a RecyclerView to display a list of entries from the API
-- [x] Display at least three (3) pieces of data for each RecyclerView item
+- [x] App contains a RecyclerView that displays a list of scrollable data
+- [x] App displays at least two (2) pieces of data for each RecyclerView item
+- [x] Use a downloadable font with custom color and size
+- [x] Modify the theme of the app in `themes.xml`
+- [x] Define and apply at least one style in **either** `themes.xml` or a new file `styles.xml`
 
 The following STRETCH features are implemented:
 
-- [x] Add a UI element for the user to interact with API further
-- [ ] Show a `Toast` or `Snackbar` when an item is clicked
-- [x] Add item dividers with `DividerItemDecoration`
+- [ ] Update the night theme to use different versions of styles when in dark mode
+- [ ] Use different drawables when in dark mode
 
 The following EXTRA features are implemented:
 
@@ -33,9 +37,9 @@ The following EXTRA features are implemented:
 
 Here's a video / GIF that demos all of the app's implemented features:
 
-<img src='uatu.gif' title='Video Demo' width='' alt='Video Demo' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Demo' width='' alt='Video Demo' />
 
-GIF created with **Kap**
+GIF created with **your chosen GIF tool**
 
 <!-- Recommended tools:
 - [Kap](https://getkap.co/) for macOS
@@ -44,7 +48,7 @@ GIF created with **Kap**
 
 ## Notes
 
-This was the most fun I've had on any coding assignment!
+Here's a place for any other notes on the app, it's creation process, or what you learned this unit!
 
 ## License
 

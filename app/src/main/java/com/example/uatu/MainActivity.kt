@@ -15,6 +15,7 @@ import okhttp3.Headers
 import org.json.JSONArray
 import java.security.MessageDigest
 
+
 class MainActivity : AppCompatActivity() {
 
     private lateinit var charList: MutableList<String>
@@ -79,12 +80,12 @@ class MainActivity : AppCompatActivity() {
                         rvChars.adapter = adapter
                         val layoutManager = LinearLayoutManager(this@MainActivity)
                         rvChars.layoutManager = layoutManager
-                        rvChars.addItemDecoration(
-                            DividerItemDecoration(
-                                this@MainActivity,
-                                DividerItemDecoration.VERTICAL
-                            )
+                        val itemDecoration = DividerItemDecoration(
+                            this@MainActivity,
+                            DividerItemDecoration.VERTICAL
                         )
+                        rvChars.addItemDecoration(itemDecoration)
+
                         isLoading = false
                         endOfScroll(layoutManager)
                         adapter.notifyItemRangeInserted(

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    style="@style/Theme.Uatu"
     tools:context=".MainActivity">
 
     <EditText
@@ -12,6 +13,8 @@
         android:layout_height="wrap_content"
         android:hint="@string/enter_name"
         android:inputType="text"
+        android:textColor="@color/white"
+        android:textColorHint="@color/red_2"
         android:layout_marginTop="10dp"
         app:layout_constraintWidth_percent=".7"
         app:layout_constraintTop_toTopOf="parent"

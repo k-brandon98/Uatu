@@ -1,6 +1,6 @@
 <!-- (This is a comment) INSTRUCTIONS: Go through this page and fill out any **bolded** entries with their correct values.-->
 
-# AND101 Project 7 - CYOAPI Part 3: Beautified
+# UATU's CODEX
 
 Submitted by: **Brandon Boit**
 
@@ -8,7 +8,7 @@ Time spent: **2** hours spent in total
 
 ## Summary
 
-**Uatu** is an android app that **displays a scrollable list of characters from the Marvel API**
+**Uatu's Codex** is an android app that **displays a scrollable list of characters from the Marvel API**
 
 If I had to describe this project in three (3) emojis, they would be: 💅👨🏾‍💻🦸‍♂️
 
@@ -16,7 +16,7 @@ If I had to describe this project in three (3) emojis, they would be: 💅👨�
 
 <!-- (This is a comment) Please be sure to change the [ ] to [x] for any features you completed.  If a feature is not checked [x], you might miss the points for that item! -->
 
-The following REQUIRED features are completed:
+<!-- The following REQUIRED features are completed:
 
 - [x] App contains a RecyclerView that displays a list of scrollable data
 - [x] App displays at least two (2) pieces of data for each RecyclerView item
@@ -31,7 +31,7 @@ The following STRETCH features are implemented:
 
 The following EXTRA features are implemented:
 
-- [ ] List anything else that you added to improve the app!
+- [ ] List anything else that you added to improve the app! -->
 
 ## Video Demo
 
@@ -46,9 +46,9 @@ GIF created with **your chosen GIF tool**
 - [ScreenToGif](https://www.screentogif.com/) for Windows
 - [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
+<!-- ## Notes
 
-Here's a place for any other notes on the app, it's creation process, or what you learned this unit!
+Here's a place for any other notes on the app, it's creation process, or what you learned this unit! -->
 
 ## License
 
